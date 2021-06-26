@@ -1,7 +1,6 @@
 <p align="center">
-   <img src="https://user-images.githubusercontent.com/46109133/123522224-67349280-d692-11eb-9cda-1597b3826b67.png" alt="dt money" width="300"/>
+   <img src="https://user-images.githubusercontent.com/46109133/123522309-e32eda80-d692-11eb-9dd2-470e42982524.png" alt="dt money" width="300"/>
 </p>
-
 <p align="center">
    <a href="https://www.linkedin.com/in/igor-sthaynny/">
       <img alt="Bruno Feitoza" src="https://img.shields.io/badge/-brfeitoza-5965e0?style=flat&logo=Linkedin&logoColor=white" />
