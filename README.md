@@ -1,6 +1,5 @@
 <p align="center">
-   <img src="https://user-images.githubusercontent.com/46109133/123522178-23da2400-d692-11eb-8c6e-3c5fa5f2c1e0.png
-" alt="dt money" width="300"/>
+   <img src="https://user-images.githubusercontent.com/46109133/123522178-23da2400-d692-11eb-8c6e-3c5fa5f2c1e0.png" alt="dt money" width="300"/>
 </p>
 
 <p align="center">
