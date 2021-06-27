@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:pay_flow/modules/app_routes.dart';
+import 'package:pay_flow/modules/barcode_scanner/barcode_scanner_screen.dart';
 import 'package:pay_flow/modules/home/home_screen.dart';
+import 'package:pay_flow/modules/insert_boleto/insert_boleto_screen.dart';
 import 'package:pay_flow/modules/login/login_screen.dart';
 import 'package:pay_flow/modules/splash/splash_screen.dart';
 import 'package:pay_flow/shared/core.dart';
@@ -18,6 +20,8 @@ class MyApp extends StatelessWidget {
         AppRoutes.initRoute: (context) => SplashScreen(),
         AppRoutes.home: (context) => HomeScreen(),
         AppRoutes.login: (context) => LoginScreen(),
+        AppRoutes.barcodeScanner: (context) => BarcodeScannerScreen(),
+        AppRoutes.insertBoleto: (context) => InsertBoletoScreen(),
       },
     );
   }

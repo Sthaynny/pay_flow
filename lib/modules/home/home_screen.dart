@@ -58,10 +58,7 @@ class _HomeScreenState extends State<HomeScreen> {
         ),
         preferredSize: Size.fromHeight(152),
       ),
-      body: PageView(
-        controller: controller.pageController,
-        children: pages,
-      ),
+      body: pages[controller.currentPage],
       bottomNavigationBar: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Row(
@@ -75,13 +72,15 @@ class _HomeScreenState extends State<HomeScreen> {
               },
               icon: Icon(
                 Icons.home,
-                color: controller.pageController.page == 0
+                color: controller.currentPage == 0
                     ? AppColors.primary
                     : AppColors.body,
               ),
             ),
             InkWell(
-              onTap: () {},
+              onTap: () {
+                Navigator.pushNamed(context, "/barcode_scanner");
+              },
               child: Container(
                 height: 56,
                 width: 56,
@@ -102,7 +101,7 @@ class _HomeScreenState extends State<HomeScreen> {
               },
               icon: Icon(
                 Icons.description_outlined,
-                color: controller.pageController.page == 1
+                color: controller.currentPage == 1
                     ? AppColors.primary
                     : AppColors.body,
               ),
