@@ -1,5 +1,5 @@
 <p align="center">
-   <img src="https://user-images.githubusercontent.com/46109133/123522224-67349280-d692-11eb-9cda-1597b3826b67.png" alt="dt money" width="300"/>
+   <img src="https://user-images.githubusercontent.com/46109133/123522224-67349280-d692-11eb-9cda-1597b3826b67.png" alt="dt money" width="200"/>
 </p>
 
 <p align="center">
@@ -7,7 +7,8 @@
       <img alt="Bruno Feitoza" src="https://img.shields.io/badge/-brfeitoza-5965e0?style=flat&logo=Linkedin&logoColor=white" />
    </a>
   <img alt="Languages" src="https://img.shields.io/github/languages/count/brfeitoza/ig-news?color=%235963C5" />
-  <img alt="lastcommit" src="https://img.shields.io/github/last-commit/brfeitoza/ig-news?color=%235761C3" />
+  <img alt="lastcommit" src="https://img![Screenshot_20210627-193421](https://user-images.githubusercontent.com/46109133/123561563-747b7b00-d77f-11eb-976b-fa9d51d36ff6.png)
+.shields.io/github/last-commit/brfeitoza/ig-news?color=%235761C3" />
   <img alt="License" src="https://img.shields.io/github/license/brfeitoza/ig-news?color=%235E69D7" />
   <img alt="Issues" src="https://img.shields.io/github/issues/brfeitoza/ig-news?color=%235965E0">
   <a href="mailto:bfeitoza634cyt@gmail.com">
@@ -23,7 +24,7 @@
 
 <hr />
 
-<p align="center">Text
+<p align="center"> This app was made for learn and practice fo the framework    
 </p>
 
 <div align="center">
@@ -44,12 +45,13 @@
 
 # :camera: Screenshots
 <div align="center">
-   <img src="./.github/home.png" width="400px">
-   <img src="./.github/posts.png" width="400px">
-   <img src="./.github/checkout.png" width="400px">
-   <img src="./.github/post.png" width="400px">
+   <img src="https://user-images.githubusercontent.com/46109133/123561569-84935a80-d77f-11eb-9682-57d9352858bf.png" width="400px">
+   <img src="https://user-images.githubusercontent.com/46109133/123561581-937a0d00-d77f-11eb-9eb2-4246b8894033.png" width="400px">
+   <img src="https://user-images.githubusercontent.com/46109133/123561582-95dc6700-d77f-11eb-8f74-6504083e8bab.png" width="400px">
 </div>
 
+
+   
 # :rocket: Technologies
 This project was made using the follow technologies:
 
