@@ -23,7 +23,7 @@ class _InsertBoletoPageState extends State<InsertBoletoScreen> {
   );
 
   final dueDateInputTextController = MaskedTextController(mask: "00/00/0000");
-  final barcodeInputTextController = TextEditingController();
+  final barcodeInputTextController = TextEditingController(text: '');
 
   @override
   void initState() {
@@ -75,6 +75,7 @@ class _InsertBoletoPageState extends State<InsertBoletoScreen> {
                       ),
                       InputTextWidget(
                         controller: dueDateInputTextController,
+                        textInputType: TextInputType.number,
                         label: "Vencimento",
                         icon: FontAwesomeIcons.timesCircle,
                         validator: controller.validateVencimento,
@@ -85,6 +86,7 @@ class _InsertBoletoPageState extends State<InsertBoletoScreen> {
                       InputTextWidget(
                         controller: moneyInputTextController,
                         label: "Valor",
+                        textInputType: TextInputType.number,
                         icon: FontAwesomeIcons.wallet,
                         validator: (_) => controller.validateValor(
                             moneyInputTextController.numberValue),
@@ -97,6 +99,7 @@ class _InsertBoletoPageState extends State<InsertBoletoScreen> {
                         controller: barcodeInputTextController,
                         label: "Código",
                         icon: FontAwesomeIcons.barcode,
+                        textInputType: TextInputType.number,
                         validator: controller.validateCodigo,
                         onChanged: (value) {
                           controller.onChange(barcode: value);

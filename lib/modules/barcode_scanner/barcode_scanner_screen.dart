@@ -62,45 +62,47 @@ class _BarcodeScannerScreenState extends State<BarcodeScannerScreen> {
           RotatedBox(
             quarterTurns: 1,
             child: Scaffold(
-                backgroundColor: Colors.transparent,
-                appBar: AppBar(
-                  backgroundColor: Colors.black,
-                  title: Text(
-                    "Escaneie o código de barras do boleto",
-                    style: AppStyles.buttonBackground,
-                  ),
-                  centerTitle: true,
-                  leading: BackButton(
-                    color: AppColors.background,
-                  ),
+              backgroundColor: Colors.transparent,
+              appBar: AppBar(
+                backgroundColor: Colors.black,
+                title: Text(
+                  "Escaneie o código de barras do boleto",
+                  style: AppStyles.buttonBackground,
                 ),
-                body: Column(
-                  children: [
-                    Expanded(
-                        child: Container(
-                      color: Colors.black.withOpacity(0.6),
-                    )),
-                    Expanded(
-                        flex: 2,
-                        child: Container(
-                          color: Colors.transparent,
-                        )),
-                    Expanded(
-                        child: Container(
-                      color: Colors.black.withOpacity(0.6),
-                    ))
-                  ],
+                centerTitle: true,
+                leading: BackButton(
+                  color: AppColors.background,
                 ),
-                bottomNavigationBar: SetLabelButtons(
-                    primaryLabel: "Inserir código do boleto",
-                    primaryOnPressed: () {
-                      Navigator.pushReplacementNamed(
-                        context,
-                        AppRoutes.insertBoleto,
-                      );
-                    },
-                    secondaryLabel: "Adicionar da galeria",
-                    secondaryOnPressed: () {})),
+              ),
+              body: Column(
+                children: [
+                  Expanded(
+                      child: Container(
+                    color: Colors.black.withOpacity(0.6),
+                  )),
+                  Expanded(
+                      flex: 2,
+                      child: Container(
+                        color: Colors.transparent,
+                      )),
+                  Expanded(
+                      child: Container(
+                    color: Colors.black.withOpacity(0.6),
+                  ))
+                ],
+              ),
+              bottomNavigationBar: SetLabelButtons(
+                primaryLabel: "Inserir código do boleto",
+                primaryOnPressed: () {
+                  Navigator.pushReplacementNamed(
+                    context,
+                    AppRoutes.insertBoleto,
+                  );
+                },
+                secondaryLabel: "Adicionar da galeria",
+                secondaryOnPressed: controller.scanWithImagePicker,
+              ),
+            ),
           ),
           ValueListenableBuilder<BarcodeScannerStatus>(
             valueListenable: controller.statusNotifier,

@@ -6,11 +6,12 @@ class BarcodeScannerStatus {
   final String barcode;
   final bool stopScanner;
 
-  BarcodeScannerStatus(
-      {this.isAvailable = false,
-      this.error = "",
-      this.stopScanner = false,
-      this.barcode = ""});
+  BarcodeScannerStatus({
+    this.isAvailable = false,
+    this.error = "",
+    this.stopScanner = false,
+    this.barcode = "",
+  });
 
   factory BarcodeScannerStatus.available() =>
       BarcodeScannerStatus(isAvailable: true, stopScanner: false);

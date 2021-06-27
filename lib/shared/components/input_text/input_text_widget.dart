@@ -8,6 +8,7 @@ class InputTextWidget extends StatelessWidget {
   final String? initialValue;
   final String? Function(String?)? validator;
   final TextEditingController? controller;
+  final TextInputType? textInputType;
   final void Function(String value) onChanged;
 
   const InputTextWidget({
@@ -18,6 +19,7 @@ class InputTextWidget extends StatelessWidget {
     this.validator,
     this.controller,
     required this.onChanged,
+    this.textInputType,
   }) : super(key: key);
 
   @override
@@ -34,6 +36,7 @@ class InputTextWidget extends StatelessWidget {
               initialValue: initialValue,
               validator: validator,
               style: AppStyles.input,
+              keyboardType: textInputType ?? TextInputType.text,
               decoration: InputDecoration(
                 contentPadding: EdgeInsets.zero,
                 labelText: label,
