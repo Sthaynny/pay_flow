@@ -55,6 +55,7 @@ This project was made using the follow technologies:
 
 * [Flutter](https://flutter.dev/)
 * [Dart](https://dart.dev/)
+* [Firebase](https://firebase.google.com/)
 
 # :computer: How to run
 
