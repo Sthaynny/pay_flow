@@ -6,6 +6,7 @@ import 'package:pay_flow/modules/insert_boleto/insert_boleto_screen.dart';
 import 'package:pay_flow/modules/login/login_screen.dart';
 import 'package:pay_flow/modules/splash/splash_screen.dart';
 import 'package:pay_flow/shared/core.dart';
+import 'package:pay_flow/shared/models/user_model.dart';
 
 class MyApp extends StatelessWidget {
   @override
@@ -18,10 +19,16 @@ class MyApp extends StatelessWidget {
       initialRoute: AppRoutes.initRoute,
       routes: {
         AppRoutes.initRoute: (context) => SplashScreen(),
-        AppRoutes.home: (context) => HomeScreen(),
+        AppRoutes.home: (context) => HomeScreen(
+              user: ModalRoute.of(context)!.settings.arguments as UserModel,
+            ),
         AppRoutes.login: (context) => LoginScreen(),
         AppRoutes.barcodeScanner: (context) => BarcodeScannerScreen(),
-        AppRoutes.insertBoleto: (context) => InsertBoletoScreen(),
+        AppRoutes.insertBoleto: (context) => InsertBoletoScreen(
+              barcode: ModalRoute.of(context) != null
+                  ? ModalRoute.of(context)!.settings.arguments.toString()
+                  : null,
+            ),
       },
     );
   }

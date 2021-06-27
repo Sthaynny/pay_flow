@@ -9,7 +9,7 @@ class AuthController {
     if (user != null) {
       _user = user;
       saveUser(user);
-      Navigator.pushReplacementNamed(context, AppRoutes.home);
+      Navigator.pushReplacementNamed(context, AppRoutes.home, arguments: user);
     } else {
       Navigator.pushReplacementNamed(context, AppRoutes.login);
     }

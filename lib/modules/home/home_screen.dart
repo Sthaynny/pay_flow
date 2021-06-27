@@ -1,26 +1,27 @@
 import 'package:flutter/material.dart';
+import 'package:pay_flow/modules/app_routes.dart';
+import 'package:pay_flow/modules/extract/extract_page.dart';
 import 'package:pay_flow/modules/home/controller/home_controller.dart';
+import 'package:pay_flow/modules/meus_boletos/meus_boletos_screen.dart';
 import 'package:pay_flow/shared/core.dart';
+import 'package:pay_flow/shared/models/user_model.dart';
 
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+  final UserModel user;
+  const HomeScreen({Key? key, required this.user}) : super(key: key);
 
   @override
-  _HomeScreenState createState() => _HomeScreenState();
+  _HomePageState createState() => _HomePageState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _HomePageState extends State<HomeScreen> {
   final controller = HomeController();
-  final pages = [
-    Container(
-      color: Colors.red,
-    ),
-    Container(color: Colors.black)
-  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: PreferredSize(
+        preferredSize: Size.fromHeight(152),
         child: Container(
           height: 152,
           color: AppColors.primary,
@@ -28,18 +29,16 @@ class _HomeScreenState extends State<HomeScreen> {
             child: ListTile(
               title: Text.rich(
                 TextSpan(
-                  text: 'Olá, ',
-                  style: AppStyles.titleRegular,
-                  children: [
-                    TextSpan(
-                      text: 'Igor',
-                      style: AppStyles.titleBoldBackground,
-                    ),
-                  ],
-                ),
+                    text: "Olá, ",
+                    style: AppStyles.titleRegular,
+                    children: [
+                      TextSpan(
+                          text: "${widget.user.name}",
+                          style: AppStyles.titleBoldBackground)
+                    ]),
               ),
               subtitle: Text(
-                'Matenha suas Contas em dia!',
+                "Mantenha suas contas em dia",
                 style: AppStyles.captionShape,
               ),
               trailing: Container(
@@ -47,47 +46,54 @@ class _HomeScreenState extends State<HomeScreen> {
                 width: 48,
                 decoration: BoxDecoration(
                   color: Colors.black,
-                  borderRadius: BorderRadius.circular(10),
-                  // image: DecorationImage(
-                  //   image: NetworkImage('https://github.com/account'),
-                  // ),
+                  borderRadius: BorderRadius.circular(5),
+                  image: DecorationImage(
+                    image: NetworkImage(widget.user.photoUrl!),
+                  ),
                 ),
               ),
             ),
           ),
         ),
-        preferredSize: Size.fromHeight(152),
       ),
-      body: pages[controller.currentPage],
-      bottomNavigationBar: Padding(
-        padding: const EdgeInsets.all(8.0),
+      body: [
+        MeusBoletosScreen(
+          key: UniqueKey(),
+        ),
+        ExtractScreen(
+          key: UniqueKey(),
+        )
+      ][controller.currentPage],
+      bottomNavigationBar: Container(
+        height: 90,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             IconButton(
-              onPressed: () {
-                controller.setPage(0);
-
+                onPressed: () {
+                  controller.setPage(0);
+                  setState(() {});
+                },
+                icon: Icon(
+                  Icons.home,
+                  color: controller.currentPage == 0
+                      ? AppColors.primary
+                      : AppColors.body,
+                )),
+            GestureDetector(
+              onTap: () async {
+                await Navigator.pushNamed(
+                  context,
+                  AppRoutes.barcodeScanner,
+                );
                 setState(() {});
               },
-              icon: Icon(
-                Icons.home,
-                color: controller.currentPage == 0
-                    ? AppColors.primary
-                    : AppColors.body,
-              ),
-            ),
-            InkWell(
-              onTap: () {
-                Navigator.pushNamed(context, "/barcode_scanner");
-              },
               child: Container(
-                height: 56,
                 width: 56,
+                height: 56,
                 decoration: BoxDecoration(
-                  color: AppColors.primary,
-                  borderRadius: BorderRadius.circular(10),
-                ),
+                    color: AppColors.primary,
+                    borderRadius: BorderRadius.circular(5)),
                 child: Icon(
                   Icons.add_box_outlined,
                   color: AppColors.background,
@@ -95,17 +101,16 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
             IconButton(
-              onPressed: () {
-                controller.setPage(1);
-                setState(() {});
-              },
-              icon: Icon(
-                Icons.description_outlined,
-                color: controller.currentPage == 1
-                    ? AppColors.primary
-                    : AppColors.body,
-              ),
-            ),
+                onPressed: () {
+                  controller.setPage(1);
+                  setState(() {});
+                },
+                icon: Icon(
+                  Icons.description_outlined,
+                  color: controller.currentPage == 1
+                      ? AppColors.primary
+                      : AppColors.body,
+                ))
           ],
         ),
       ),

@@ -3,6 +3,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:google_ml_kit/google_ml_kit.dart';
 import 'package:image_picker/image_picker.dart';
+
 import 'barcode_scanner_status.dart';
 
 class BarcodeScannerController {
@@ -11,10 +12,11 @@ class BarcodeScannerController {
   BarcodeScannerStatus get status => statusNotifier.value;
   set status(BarcodeScannerStatus status) => statusNotifier.value = status;
 
-  var barcodeScanner = GoogleMlKit.vision.barcodeScanner();
-  CameraController? cameraController;
+  final barcodeScanner = GoogleMlKit.vision.barcodeScanner();
 
   InputImage? imagePicker;
+
+  CameraController? cameraController;
 
   void getAvailableCameras() async {
     try {
@@ -34,7 +36,6 @@ class BarcodeScannerController {
   Future<void> scannerBarCode(InputImage inputImage) async {
     try {
       final barcodes = await barcodeScanner.processImage(inputImage);
-
       var barcode;
       for (Barcode item in barcodes) {
         barcode = item.value.displayValue;
@@ -101,6 +102,7 @@ class BarcodeScannerController {
             );
             final inputImageCamera = InputImage.fromBytes(
                 bytes: bytes, inputImageData: inputImageData);
+
             scannerBarCode(inputImageCamera);
           } catch (e) {
             print(e);
