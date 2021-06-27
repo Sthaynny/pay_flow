@@ -1,5 +1,5 @@
 <p align="center">
-   <img src="https://user-images.githubusercontent.com/46109133/123522224-67349280-d692-11eb-9cda-1597b3826b67.png" alt="dt money" width="200"/>
+   <img src="https://user-images.githubusercontent.com/46109133/123561796-e99b8000-d780-11eb-8d58-a46e9d82a2dd.png" alt="dt money" width="200"/>
 </p>
 <p align="center">
   <img alt="Languages" src="https://img.shields.io/github/languages/count/brfeitoza/ig-news?color=%235963C5" />
