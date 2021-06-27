@@ -1,17 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:pay_flow/modules/login/controller/login_controller.dart';
 import 'package:pay_flow/shared/components/social_login/social_login_button.dart';
 import 'package:pay_flow/shared/core.dart';
 
-class LoginScrren extends StatefulWidget {
-  LoginScrren({
+class LoginScreen extends StatefulWidget {
+  LoginScreen({
     Key? key,
   }) : super(key: key);
 
   @override
-  _LoginScrrenState createState() => _LoginScrrenState();
+  _LoginScreenState createState() => _LoginScreenState();
 }
 
-class _LoginScrrenState extends State<LoginScrren> {
+class _LoginScreenState extends State<LoginScreen> {
+  final controller = LoginController();
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
@@ -54,7 +56,7 @@ class _LoginScrrenState extends State<LoginScrren> {
                     ),
                     child: Text(
                       'Organize seus boletos em um só lugar',
-                      style: TextStyles.titleHome,
+                      style: AppStyles.titleHome,
                       textAlign: TextAlign.center,
                     ),
                   ),
@@ -71,7 +73,9 @@ class _LoginScrrenState extends State<LoginScrren> {
                   right: 40,
                   top: 40,
                 ),
-                child: SocialLoginButton(onTap: () {}),
+                child: SocialLoginButton(
+                  onTap: () => controller.googlerSignin(context),
+                ),
               ),
             ),
           ],
