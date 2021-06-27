@@ -69,7 +69,7 @@ Go to device or web to see the application running.
 
 # :bug: Issues
 
-Create a <a href="https://github.com/brfeitoza/pay_flow/issues">new issue report</a>, it will be an honor to be able to help you solve and further improve our application.
+Create a <a href="https://github.com/Sthaynny/pay_flow/issues">new issue report</a>, it will be an honor to be able to help you solve and further improve our application.
 
 # :sparkles: Contributing
 
