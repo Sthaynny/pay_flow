@@ -8,10 +8,6 @@
   <img alt="Issues" src="https://img.shields.io/github/issues/brfeitoza/ig-news?color=%235965E0">
 </p>
 
-<p align="center">
-  📰 ig.news is a blog where you can stay on top of the latest news about the React world.
-</p>
-
 <p align="center">Project developed during the <strong>NLW6</strong> of Rocketseat | <a href="https://rocketseat.com.br/">Rocketseat</a></p>
 
 <hr />
