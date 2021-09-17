@@ -2,10 +2,10 @@
    <img src="https://user-images.githubusercontent.com/46109133/123561796-e99b8000-d780-11eb-8d58-a46e9d82a2dd.png" alt="dt money" width="200"/>
 </p>
 <p align="center">
-  <img alt="Languages" src="https://img.shields.io/github/languages/count/brfeitoza/ig-news?color=%235963C5" />
-  <img alt="lastcommit" src="https://img.shields.io/github/last-commit/brfeitoza/ig-news?color=%235761C3" />
-  <img alt="License" src="https://img.shields.io/github/license/brfeitoza/ig-news?color=%235E69D7" />
-  <img alt="Issues" src="https://img.shields.io/github/issues/brfeitoza/ig-news?color=%235965E0">
+  <img alt="Languages" src="https://img.shields.io/github/languages/count/Sthaynny/pay_flow?color=%235963C5" />
+  <img alt="lastcommit" src="https://img.shields.io/github/last-commit/Sthaynny/pay_flow?color=%235761C3" />
+  <img alt="License" src="https://img.shields.io/github/license/Sthaynny/pay_flow?color=%235E69D7" />
+  <img alt="Issues" src="https://img.shields.io/github/issues/Sthaynny/pay_flow?color=%235965E0">
 </p>
 
 <p align="center">Project developed during the <strong>NLW6</strong> of Rocketseat | <a href="https://rocketseat.com.br/">Rocketseat</a></p>
